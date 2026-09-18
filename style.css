@@ -141,19 +141,27 @@ header[id] {
 
 /* ============ ② 首屏 ============ */
 .hero {
-  padding: 128px 0 112px;
-  text-align: center;
+  padding: 80px 0;
+  text-align: left;
 }
 
+/* 左侧文字（姓名 / 定位 / 按钮），右侧头像 */
 .hero-inner {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas:
+    "name avatar"
+    "tagline avatar"
+    "actions avatar";
   align-items: center;
+  column-gap: 4rem;
+  row-gap: 1.25rem;
 }
 
 .hero-avatar {
-  width: 120px;
-  height: 120px;
+  grid-area: avatar;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -162,11 +170,11 @@ header[id] {
   letter-spacing: 0.2em;
   color: #fff;
   background: var(--color-primary);
-  margin-bottom: 1.75rem;
   user-select: none;
 }
 
 .hero-name {
+  grid-area: name;
   font-size: clamp(2.5rem, 6vw, 3.4rem);
   font-weight: 800;
   letter-spacing: 0.04em;
@@ -174,17 +182,19 @@ header[id] {
 }
 
 .hero-tagline {
-  margin-top: 0.9rem;
-  max-width: 36em;
-  font-size: 1.1rem;
+  grid-area: tagline;
+  max-width: 30em;
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.6;
   color: var(--color-text-muted);
 }
 
 .hero-actions {
-  margin-top: 2.25rem;
+  grid-area: actions;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 1rem;
 }
 
@@ -218,7 +228,7 @@ header[id] {
 
 /* ============ 区块通用 ============ */
 .section {
-  padding: 96px 0;
+  padding: 80px 0;
 }
 
 .section-title {
@@ -275,8 +285,15 @@ header[id] {
 /* ============ ④ 项目经历 ============ */
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: 1fr;
   gap: var(--card-gap);
+}
+
+/* 桌面端固定一行三列 */
+@media (min-width: 900px) {
+  .project-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .project-card {
@@ -457,7 +474,32 @@ header[id] {
   }
 
   .hero {
-    padding: 80px 0 72px;
+    padding: 64px 0;
+    text-align: center;
+  }
+
+  /* 窄屏首屏回退为纵向堆叠：头像在上，文字居中 */
+  .hero-inner {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "avatar"
+      "name"
+      "tagline"
+      "actions";
+    justify-items: center;
+    row-gap: 1rem;
+  }
+
+  .hero-avatar {
+    margin-bottom: 0.25rem;
+  }
+
+  .hero-tagline {
+    max-width: none;
+  }
+
+  .hero-actions {
+    justify-content: center;
   }
 
   .section {
