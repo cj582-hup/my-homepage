@@ -497,7 +497,11 @@ header[id] {
     row-gap: 1rem;
   }
 
+  /* 窄屏头像缩小，避免占屏过大 */
   .hero-avatar {
+    width: 104px;
+    height: 104px;
+    font-size: 0.85rem;
     margin-bottom: 0.25rem;
   }
 
