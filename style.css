@@ -1,15 +1,16 @@
 /* ============ 基础 ============ */
 :root {
-  --color-bg: #ffffff;
-  --color-text: #1f2937;      /* 正文深灰 */
-  --color-text-strong: #111827;
-  --color-text-muted: #6b7280;
+  --color-bg: #ffffff;        /* 浅色底 */
+  --color-text: #333333;      /* 正文：中性深灰 */
+  --color-text-strong: #1a1a1a;
+  --color-text-muted: #666666;
   --color-primary: #0f766e;   /* 唯一主色：深青 */
   --color-primary-dark: #115e59;
   --color-primary-tint: rgba(15, 118, 110, 0.08);
-  --color-border: #e5e7eb;    /* 细边框 */
-  --radius-md: 8px;
-  --radius-lg: 12px;
+  --color-border: #e5e5e5;    /* 细边框：中性灰 */
+  --radius-card: 14px;        /* 所有卡片统一圆角 */
+  --card-padding: 1.75rem;    /* 所有卡片统一内边距 */
+  --card-gap: 1.5rem;         /* 卡片网格统一间距 */
   --nav-height: 64px;
 }
 
@@ -27,7 +28,7 @@ body {
   font-family: "PingFang SC", "Microsoft YaHei", "Segoe UI", system-ui, sans-serif;
   background: var(--color-bg);
   color: var(--color-text);
-  line-height: 1.7;
+  line-height: 1.8;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -166,7 +167,7 @@ header[id] {
 }
 
 .hero-name {
-  font-size: clamp(2.2rem, 5vw, 3rem);
+  font-size: clamp(2.5rem, 6vw, 3.4rem);
   font-weight: 800;
   letter-spacing: 0.04em;
   color: var(--color-text-strong);
@@ -221,11 +222,11 @@ header[id] {
 }
 
 .section-title {
-  font-size: 1.6rem;
-  font-weight: 700;
+  font-size: 2rem;
+  font-weight: 800;
   text-align: center;
   color: var(--color-text-strong);
-  margin-bottom: 3rem;
+  margin-bottom: 3.25rem;
 }
 
 .section-title::after {
@@ -242,8 +243,8 @@ header[id] {
 .edu-card {
   background: var(--color-bg);
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  padding: 2rem 2.25rem;
+  border-radius: var(--radius-card);
+  padding: var(--card-padding);
 }
 
 .edu-head {
@@ -255,8 +256,8 @@ header[id] {
 }
 
 .edu-school {
-  font-size: 1.2rem;
-  font-weight: 700;
+  font-size: 1.3rem;
+  font-weight: 800;
   color: var(--color-text-strong);
 }
 
@@ -275,7 +276,7 @@ header[id] {
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
+  gap: var(--card-gap);
 }
 
 .project-card {
@@ -283,19 +284,18 @@ header[id] {
   flex-direction: column;
   background: var(--color-bg);
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  padding: 1.75rem;
-  transition: border-color 0.2s, transform 0.2s;
+  border-radius: var(--radius-card);
+  padding: var(--card-padding);
+  transition: border-color 0.2s;
 }
 
 .project-card:hover {
   border-color: var(--color-primary);
-  transform: translateY(-3px);
 }
 
 .project-title {
-  font-size: 1.1rem;
-  font-weight: 700;
+  font-size: 1.2rem;
+  font-weight: 800;
   color: var(--color-text-strong);
 }
 
@@ -311,8 +311,6 @@ header[id] {
   margin-bottom: 1.25rem;
   color: var(--color-text);
   font-size: 0.92rem;
-  line-height: 1.75;
-  text-align: justify;
 }
 
 .tag-list {
@@ -373,7 +371,7 @@ header[id] {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1.5rem;
+  gap: var(--card-gap);
 }
 
 .contact-item {
@@ -383,16 +381,15 @@ header[id] {
   flex-direction: column;
   align-items: center;
   gap: 0.3rem;
-  padding: 2rem 1.5rem;
+  padding: var(--card-padding);
   background: var(--color-bg);
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  transition: border-color 0.2s, transform 0.2s;
+  border-radius: var(--radius-card);
+  transition: border-color 0.2s;
 }
 
 .contact-item:hover {
   border-color: var(--color-primary);
-  transform: translateY(-3px);
 }
 
 .contact-icon {
