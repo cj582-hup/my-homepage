@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="应届本科生个人主页：教育背景、项目经历、技能与联系方式">
+  <title>张三 | 个人主页</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ① 顶部导航 -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="#home" class="nav-logo">张三</a>
+      <button class="nav-toggle" id="navToggle" aria-label="打开菜单" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link">首页</a></li>
+        <li><a href="#education" class="nav-link">教育背景</a></li>
+        <li><a href="#projects" class="nav-link">项目经历</a></li>
+        <li><a href="#skills" class="nav-link">技能</a></li>
+        <li><a href="#contact" class="nav-link">联系方式</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ② 首屏 -->
+  <header class="hero" id="home">
+    <div class="container hero-inner">
+      <div class="hero-avatar" aria-hidden="true">头像</div>
+      <h1 class="hero-name">张三</h1>
+      <p class="hero-tagline">一句话定位：计算机科学与技术专业应届本科生，专注于 Web 全栈开发</p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">查看项目</a>
+        <a href="#contact" class="btn btn-outline">联系我</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ③ 教育背景 -->
+    <section class="section" id="education">
+      <div class="container">
+        <h2 class="section-title">教育背景</h2>
+        <div class="edu-card">
+          <div class="edu-head">
+            <h3 class="edu-school">某某大学</h3>
+            <span class="edu-date">20XX.09 — 20XX.06</span>
+          </div>
+          <p class="edu-major">本科 · 某某专业</p>
+          <ul class="edu-details">
+            <li>主修课程：课程一、课程二、课程三、课程四</li>
+            <li>GPA / 排名：X.X / 4.0（专业前 XX%）</li>
+            <li>荣誉奖项：奖学金 / 竞赛获奖占位</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ④ 项目经历 -->
+    <section class="section section-alt" id="projects">
+      <div class="container">
+        <h2 class="section-title">项目经历</h2>
+        <div class="project-grid">
+          <article class="project-card">
+            <h3 class="project-title">项目名称一</h3>
+            <p class="project-desc">一句话描述：这个项目做了什么、解决了什么问题、取得了什么效果。</p>
+            <ul class="tag-list">
+              <li class="tag">技术一</li>
+              <li class="tag">技术二</li>
+              <li class="tag">技术三</li>
+            </ul>
+          </article>
+          <article class="project-card">
+            <h3 class="project-title">项目名称二</h3>
+            <p class="project-desc">一句话描述：这个项目做了什么、解决了什么问题、取得了什么效果。</p>
+            <ul class="tag-list">
+              <li class="tag">技术一</li>
+              <li class="tag">技术二</li>
+              <li class="tag">技术三</li>
+            </ul>
+          </article>
+          <article class="project-card">
+            <h3 class="project-title">项目名称三</h3>
+            <p class="project-desc">一句话描述：这个项目做了什么、解决了什么问题、取得了什么效果。</p>
+            <ul class="tag-list">
+              <li class="tag">技术一</li>
+              <li class="tag">技术二</li>
+              <li class="tag">技术三</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ⑤ 技能 -->
+    <section class="section" id="skills">
+      <div class="container">
+        <h2 class="section-title">技能</h2>
+        <div class="skill-cloud">
+          <span class="skill-tag skill-lg">技能一</span>
+          <span class="skill-tag">技能二</span>
+          <span class="skill-tag skill-md">技能三</span>
+          <span class="skill-tag">技能四</span>
+          <span class="skill-tag skill-lg">技能五</span>
+          <span class="skill-tag">技能六</span>
+          <span class="skill-tag skill-md">技能七</span>
+          <span class="skill-tag">技能八</span>
+          <span class="skill-tag">技能九</span>
+          <span class="skill-tag skill-md">技能十</span>
+          <span class="skill-tag">技能十一</span>
+          <span class="skill-tag">技能十二</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ⑥ 联系方式 -->
+    <section class="section section-alt" id="contact">
+      <div class="container">
+        <h2 class="section-title">联系方式</h2>
+        <div class="contact-list">
+          <a class="contact-item" href="mailto:example@email.com">
+            <span class="contact-icon" aria-hidden="true">✉</span>
+            <span class="contact-label">邮箱</span>
+            <span class="contact-value">example@email.com</span>
+          </a>
+          <a class="contact-item" href="https://github.com/yourname" target="_blank" rel="noopener noreferrer">
+            <span class="contact-icon" aria-hidden="true">⌨</span>
+            <span class="contact-label">GitHub</span>
+            <span class="contact-value">github.com/yourname</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 页脚 -->
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year">2026</span> 张三 · 保留所有权利</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
