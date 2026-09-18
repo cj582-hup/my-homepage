@@ -99,9 +99,11 @@ header[id] {
   color: var(--color-primary);
 }
 
-.nav-link.active {
-  color: var(--color-primary);
-  background: var(--color-primary-tint);
+/* 当前所在区块：实心主色胶囊 */
+.nav-link.active,
+.nav-link.active:hover {
+  color: #fff;
+  background: var(--color-primary);
 }
 
 /* 汉堡按钮：默认隐藏，窄屏显示 */
@@ -255,6 +257,13 @@ header[id] {
   border: 1px solid var(--color-border);
   border-radius: var(--radius-card);
   padding: var(--card-padding);
+  transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+
+.edu-card:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
 }
 
 .edu-head {
@@ -303,11 +312,13 @@ header[id] {
   border: 1px solid var(--color-border);
   border-radius: var(--radius-card);
   padding: var(--card-padding);
-  transition: border-color 0.2s;
+  transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
 }
 
 .project-card:hover {
   border-color: var(--color-primary);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
 }
 
 .project-title {
@@ -372,17 +383,6 @@ header[id] {
   border-color: var(--color-primary);
 }
 
-.skill-md {
-  font-size: 1.08rem;
-  font-weight: 600;
-}
-
-.skill-lg {
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: var(--color-text-strong);
-}
-
 /* ============ ⑥ 联系方式 ============ */
 .contact-list {
   display: flex;
@@ -402,11 +402,13 @@ header[id] {
   background: var(--color-bg);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-card);
-  transition: border-color 0.2s;
+  transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
 }
 
 .contact-item:hover {
   border-color: var(--color-primary);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
 }
 
 .contact-icon {
@@ -441,6 +443,11 @@ header[id] {
   color: var(--color-text-muted);
   background: var(--color-bg);
   border-top: 1px solid var(--color-border);
+}
+
+.footer-note {
+  margin-top: 0.3rem;
+  font-size: 0.85rem;
 }
 
 /* ============ 响应式 ============ */
